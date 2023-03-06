@@ -6,6 +6,7 @@ import { Home } from "./pages/Home/Home";
 import { Filtered } from "./pages/Filtered/Filtered";
 import { Error } from "./pages/Error/Error";
 import { Header } from "components/Header/Header";
+import { Footer } from "components/Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path={"/:query"} element={<Filtered />} />
           <Route path={"*"} element={<Error />} />
         </Routes>
+        <Footer />
       </div>
     </BookProvider>
   );
