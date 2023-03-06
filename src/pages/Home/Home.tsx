@@ -1,5 +1,7 @@
-import React from "react";
+import { CardsContainer } from "components/CardsContainer/CardsContainer";
+import { useBooks } from "contexts/BookContext";
 
 export const Home = () => {
-  return <div>Home</div>;
+  const { allData } = useBooks();
+  return <CardsContainer data={allData} />;
 };

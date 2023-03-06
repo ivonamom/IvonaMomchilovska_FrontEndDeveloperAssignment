@@ -1,5 +1,5 @@
-import { useBooks } from "contexts/BookContext";
 import { useCallback } from "react";
+import { useNavigate } from "react-router";
 
 interface Props {
   setSearchValue: (value: string) => void;
@@ -14,17 +14,17 @@ export const Input = ({
   toggleSidebar,
   className,
 }: Props) => {
-  const { handleSearch } = useBooks();
+  const navigate = useNavigate();
 
   const onKeyUp = useCallback(
     (ev: React.KeyboardEvent<HTMLInputElement>) => {
       if (ev.key?.toLowerCase() === "enter") {
-        handleSearch(searchValue);
+        navigate(`/${searchValue}`);
         setSearchValue("");
         if (toggleSidebar) toggleSidebar();
       }
     },
-    [searchValue, handleSearch, setSearchValue, toggleSidebar]
+    [searchValue, navigate, setSearchValue, toggleSidebar]
   );
 
   return (
