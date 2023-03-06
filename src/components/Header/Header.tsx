@@ -1,14 +1,13 @@
 import React, { useCallback } from "react";
 import { useState } from "react";
-import { useBooks } from "../../contexts/BookContext";
 import { CollapseSidebar } from "./components/CollapseSidebar/CollapseSidebar";
 import { Input } from "./components/Input";
 import "./Header.css";
 import logo from "./enterprise-league-logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
-  const { handleSearch } = useBooks();
+  const navigate = useNavigate();
 
   const [searchValue, setSearchValue] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -44,7 +43,7 @@ export const Header = () => {
           <i
             className="header__input-container__icon--search fa-solid fa-magnifying-glass fa-2x "
             onClick={() => {
-              handleSearch(searchValue);
+              navigate(`/${searchValue}`);
               setSearchValue("");
             }}
           />

@@ -1,5 +1,4 @@
-import React from "react";
-import { useBooks } from "../../../../contexts/BookContext";
+import { useNavigate } from "react-router";
 import { Input } from "../Input";
 import "./CollapseSidebar.css";
 
@@ -14,7 +13,7 @@ export const CollapseSidebar = ({
   setSearchValue,
   toggleSidebar,
 }: Props) => {
-  const { handleSearch } = useBooks();
+  const navigate = useNavigate();
   return (
     <div className="collapse-sidebar">
       <i
@@ -31,7 +30,7 @@ export const CollapseSidebar = ({
         className="collapse-sidebar__button--search"
         onClick={() => {
           toggleSidebar();
-          handleSearch(searchValue);
+          navigate(`/${searchValue}`);
           setSearchValue("");
         }}
       >

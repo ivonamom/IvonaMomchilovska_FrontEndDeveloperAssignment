@@ -23,3 +23,8 @@ function App() {
 }
 
 export default App;
+
+//TODO:
+// add back to top button
+// add footer
+// check and optimize code

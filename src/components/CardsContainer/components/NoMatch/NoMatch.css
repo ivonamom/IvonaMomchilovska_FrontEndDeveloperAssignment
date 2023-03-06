@@ -1,0 +1,5 @@
+.no-match-container {
+  padding: 50px 0;
+  min-height: calc(100vh - 91px - 68.4px);
+  text-align: center;
+}
