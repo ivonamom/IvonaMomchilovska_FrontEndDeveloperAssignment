@@ -10,6 +10,7 @@ import { BackToTopButton } from "components/BackToTopButton/BackToTopButton";
 import { useCallback, useEffect, useState } from "react";
 
 function App() {
+  //used to show/hide the back to top button
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const updateScrolled = useCallback(() => {
@@ -20,6 +21,7 @@ function App() {
     }
   }, []);
 
+  // listening on scroll - to hide or show back to top button
   useEffect(() => {
     window.addEventListener("scroll", updateScrolled);
 
@@ -34,7 +36,7 @@ function App() {
         <Header />
         <Routes>
           <Route path={"/"} element={<Home />} />
-          <Route path={"/:query"} element={<Filtered />} />
+          <Route path={"/books/:query"} element={<Filtered />} />
           <Route path={"*"} element={<Error />} />
         </Routes>
       </BookProvider>
@@ -45,6 +47,3 @@ function App() {
 }
 
 export default App;
-
-//TODO:
-// check and optimize code

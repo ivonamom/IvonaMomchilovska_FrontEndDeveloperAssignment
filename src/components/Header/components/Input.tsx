@@ -19,7 +19,7 @@ export const Input = ({
   const onKeyUp = useCallback(
     (ev: React.KeyboardEvent<HTMLInputElement>) => {
       if (ev.key?.toLowerCase() === "enter") {
-        navigate(`/${searchValue}`);
+        navigate(`/books/${searchValue}`);
         setSearchValue("");
         if (toggleSidebar) toggleSidebar();
       }

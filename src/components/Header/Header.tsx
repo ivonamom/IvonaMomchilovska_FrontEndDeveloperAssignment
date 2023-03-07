@@ -43,7 +43,7 @@ export const Header = () => {
           <i
             className="header__input-container__icon--search fa-solid fa-magnifying-glass fa-2x "
             onClick={() => {
-              navigate(`/${searchValue}`);
+              navigate(`/books/${searchValue}`);
               setSearchValue("");
             }}
           />

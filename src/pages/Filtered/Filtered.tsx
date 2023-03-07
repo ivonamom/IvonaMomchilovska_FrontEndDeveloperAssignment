@@ -7,21 +7,22 @@ import { BookType } from "types";
 export const Filtered = () => {
   const { allData } = useBooks();
   const navigate = useNavigate();
-
   const { query } = useParams();
-  const [filteredData, setFilteredData] = useState<BookType[]>([]);
-  //function to filter the books using the search value - will be sent through props to header
+  console.log(query);
 
+  const [filteredData, setFilteredData] = useState<BookType[]>([]);
+
+  //filtering the books that include the searched value
   useEffect(() => {
-    const filteredArr = allData!.filter(
+    const filteredArr = allData.filter(
       (book) =>
         book.author.toLowerCase().includes(query!.toLowerCase()) ||
         book.title.toLowerCase().includes(query!.toLowerCase()) ||
         book.genre.toLowerCase().includes(query!.toLowerCase())
     );
     setFilteredData(filteredArr);
-    navigate(`/${query}`);
   }, [query, allData, navigate]);
 
+  // sending the filtered books to be rendered
   return <CardsContainer data={filteredData} />;
 };

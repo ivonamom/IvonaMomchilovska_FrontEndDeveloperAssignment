@@ -31,7 +31,7 @@ export const CollapseSidebar = ({
         className="collapse-sidebar__button--search"
         onClick={() => {
           toggleSidebar();
-          navigate(`/${searchValue}`);
+          navigate(`/books/${searchValue}`);
           setSearchValue("");
         }}
       >
