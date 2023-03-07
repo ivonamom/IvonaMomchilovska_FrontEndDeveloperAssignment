@@ -14,6 +14,7 @@ export const CollapseSidebar = ({
   toggleSidebar,
 }: Props) => {
   const navigate = useNavigate();
+
   return (
     <div className="collapse-sidebar">
       <i
@@ -36,7 +37,7 @@ export const CollapseSidebar = ({
       >
         Search
       </button>
-      <i className="fa-brands fa-searchengin fa-8x"></i>
+      <i className="fa-brands fa-searchengin fa-8x" />
     </div>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import "./SingleCard.css";
 import { BookType } from "../../../../types";
 

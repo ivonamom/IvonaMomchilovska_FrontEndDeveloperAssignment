@@ -4,10 +4,12 @@ import "./NoMatch.css";
 export const NoMatch = () => {
   return (
     <div className="no-match-container">
-      <h2>There are no books matching your search.</h2>
-      <p>
-        Edit your search or <Link to="/">show all books</Link>
-      </p>
+      <div className="no-match-container__inner">
+        <h2>There are no books matching your search.</h2>
+        <p>
+          Edit your search or <Link to="/">show all books</Link>
+        </p>
+      </div>
     </div>
   );
 };

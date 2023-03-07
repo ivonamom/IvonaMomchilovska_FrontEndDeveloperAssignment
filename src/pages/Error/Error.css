@@ -2,13 +2,14 @@
   padding: 50px 0;
   min-height: calc(100vh - 91px - 68.4px);
   text-align: center;
+  overflow: hidden;
 }
 
 .error-container__h1 {
   font-size: 50px;
   font-weight: bold;
   color: red;
-  animation: shake 0.8s linear infinite;
+  animation: error-animation 1s ease-in-out infinite alternate;
 }
 
 .error-container__link {
@@ -16,23 +17,11 @@
   text-decoration: underline dotted;
 }
 
-@keyframes shake {
-  0% {
-    transform: rotate(0);
+@keyframes error-animation {
+  from {
+    transform: translateX(0);
   }
-  20% {
-    transform: rotate(-20deg);
-  }
-  40% {
-    transform: rotate(20deg);
-  }
-  60% {
-    transform: rotate(-20deg);
-  }
-  80% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(0);
+  to {
+    transform: translateX(1rem);
   }
 }
