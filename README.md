@@ -7,6 +7,12 @@ The purpose of this project is to create a website that allows users to go throu
 - Search for books by title, author or genre
 - Display search results as a list of books
 - Responsive design that adapts to different screen sizes
+- Back to top button for better user experience
+
+## Project Hosting Status
+
+> This project is not currently hosted due to time constraints. However, I plan to host it soon. Please stay tuned for updates. \
+> Below are clear instructions on how to get the project started locally.
 
 ## Installation and Setup Instructions
 
@@ -63,6 +69,8 @@ I use TypeScript because it is a statically-typed superset of JavaScript that of
 > This project follows the BEM methodology per request of the company I'm applying to.
 
 BEM is a CSS methodology that provides a clear and consistent naming convention for styling HTML elements, making it easier to maintain and scale CSS code-bases. It also helps to avoid style conflicts and improve code readability.
+
+##
 
 ## Credits
 

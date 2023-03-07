@@ -1,0 +1,25 @@
+.back-to-top {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  bottom: 25px;
+  right: 35px;
+  z-index: 500;
+  opacity: 1;
+  animation: slideInBottom 0.2s linear;
+}
+
+@keyframes slideInBottom {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
